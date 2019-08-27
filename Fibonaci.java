@@ -1,6 +1,6 @@
 package javacamp;
 
-public class fibonacci {
+public class Fibonaci {
 
 	public static void main(String[] args) {
 		int n=2;

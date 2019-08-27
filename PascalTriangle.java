@@ -1,6 +1,6 @@
 package javacamp;
 
-public class pascaltr {
+public class PascalTriangle {
 
 	public static void main(String[] args) {
 		int n=5, k=2;

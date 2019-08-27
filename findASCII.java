@@ -1,6 +1,6 @@
 package javacamp;
 
-public class findASCII {
+public class FindASCII {
 
 	public static void main(String[] args) {
 		char letter=' ';

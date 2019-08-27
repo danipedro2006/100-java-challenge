@@ -1,6 +1,6 @@
 package javacamp;
 
-public class prime_test {
+public class PrimeTest {
 
 	public static void main(String[] args) {
 		int n=7;

@@ -1,6 +1,6 @@
 package javacamp;
 
-public class count_vowels {
+public class CountVowels {
 	static int counter=0;
 	public static void main(String[] args) {
 		String text="jhsfadvccwsjahsiuhdeydu";

@@ -1,6 +1,6 @@
 package javacamp;
 import java.lang.*;
-public class babilonianSqr {
+public class BabilonianSqr {
 	static double r,dif,res;
 	
 	public static void main(String[] args) {

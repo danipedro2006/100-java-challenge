@@ -1,6 +1,6 @@
 package javacamp;
 
-public class reverse_string {
+public class ReverseString {
 	static String rtext="";
 	public static void main(String[] args) {
 		String text="abcdefghijklmn";

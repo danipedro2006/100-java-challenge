@@ -1,6 +1,6 @@
 package javacamp;
 
-public class recsum {
+public class RecursiveSum {
 
 	public static void main(String[] args) {
 		int n=100;

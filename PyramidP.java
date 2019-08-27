@@ -1,6 +1,6 @@
 package javacamp;
 
-public class pyramid {
+public class PyramidP {
 	static int num=1;
 	public static void main(String[] args) {
 		for(int row=1;row<24;row++)

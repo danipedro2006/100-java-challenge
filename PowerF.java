@@ -1,6 +1,6 @@
 package javacamp;
 
-public class power {
+public class PowerF {
 
 	public static void main(String[] args) {
 		int base=2;

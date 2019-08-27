@@ -1,6 +1,6 @@
 package javacamp;
 
-public class check_alphabet {
+public class CheckAlphabet {
 
 	public static void main(String[] args) {
 		String text="hjahfhry57fngyrfwfgxtr";

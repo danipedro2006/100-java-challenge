@@ -1,6 +1,6 @@
 package javacamp;
 
-public class max_min {
+public class MaxMin{
 
 	public static void main(String[] args) {
 		int[] series= {12,4,5,3,8,9,12,78};

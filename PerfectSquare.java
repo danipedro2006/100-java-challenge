@@ -1,6 +1,6 @@
 package javacamp;
 
-public class perfect_square {
+public class PerfectSquare {
 
 	public static void main(String[] args) {
 		int n=81;
