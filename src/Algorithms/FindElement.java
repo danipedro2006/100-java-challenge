@@ -1,5 +1,7 @@
 package Algorithms;
 
+// find array elements which sum to a given integer
+
 public class FindElement {
 
 	public static void main(String[] args) {

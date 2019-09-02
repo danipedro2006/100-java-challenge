@@ -1,4 +1,4 @@
-package tree;
+package Algorithms;
 
 public class AppTest {
 
