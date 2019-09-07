@@ -1,4 +1,4 @@
-package recursion;
+package Algorithms;
 
 public class CubeN {
 
