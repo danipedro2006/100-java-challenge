@@ -1,21 +1,20 @@
+//implement a recursive count-down function
+
 package Algorithms;
 
 public class CountDown {
 
 	public static void main(String[] args) {
-		countD(10);
+		countDown(10);
 	}
 
-	private static void countD(int n) {
-		if(n==1)
-		{
+	private static void countDown(int n) {
+		if (n == 1) {
 			System.out.println(1);
-		}
-		else
-		{
+		} else {
 			System.out.println(n);
-			countD(n-1);
-			
+			countDown(n - 1);
+
 		}
 	}
 

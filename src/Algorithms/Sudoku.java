@@ -1,6 +1,11 @@
 package Algorithms;
 
 public class Sudoku {
+	public static final int BOARD_SIZE=9;
+	public static final int BOX_SIZE=3;
+	public static final int MIN_NUMBER=1;
+	public static final int MAX_NUMBER=9;
+
 	int[][] table;
 
 	public Sudoku(int[][] table) {
@@ -8,57 +13,83 @@ public class Sudoku {
 	}
 
 	public static void main(String[] args) {
-		int[][] table = { { 1, 4, 0 }, { 4, 1, 3 }, { 3, 0, 9 } };
 
-		display(table);
-		// System.out.println(checkRow(table,0));
-		// System.out.println(checkCol(table, 0));
-		System.out.println(checkTable(table));
+		int[][] table = { { 3, 0, 6, 0, 0, 8, 4, 0, 0 }, { 5, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 8, 7, 0, 0, 0, 0, 3, 1 },
+				{ 0, 0, 3, 0, 0, 0, 0, 8, 0 }, { 9, 0, 0, 8, 6, 3, 0, 0, 5 }, { 0, 5, 0, 0, 9, 0, 6, 0, 0 },
+				{ 1, 3, 0, 0, 0, 0, 2, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 4 }, { 0, 0, 5, 2, 0, 6, 3, 0, 0 } };
+
+		Sudoku sudoku = new Sudoku(table);
+
+		sudoku.display(table);
+		System.out.println("");
+		System.out.println("Solved");
+		System.out.println("===========================");
+		sudoku.solveProblem();
+
 	}
 
-	private static boolean checkTable(int[][] table) {
+	private void solveProblem() {
+		if (!solve(0, 0)) {
+			System.out.println("No solution");
+		} else {
+			display(table);
 
-		for (int r = 0; r < table.length; r++) {
-			if (checkRow(table, r) == false)
-				return false;
 		}
 
-		for (int c = 0; c < table.length; c++) {
-			if (checkCol(table, c) == false)
+	}
+
+	boolean valid(int col, int row, int numbers) {
+		for (int i = 0; i <BOARD_SIZE; ++i)
+			if (table[i][row] == numbers)
 				return false;
-		}
+
+		for (int k = 0; k <BOARD_SIZE; ++k)
+			if (table[col][k] == numbers)
+				return false;
+
+		int roffset = (col / 3) *BOX_SIZE;
+		int coffset = (row / 3) *BOX_SIZE;
+
+		for (int i = 0; i < BOX_SIZE; ++i)
+			for (int j = 0; j <BOX_SIZE; ++j)
+				if (numbers == table[roffset + i][coffset + j])
+					return false;
+
 		return true;
 	}
 
-	private static boolean checkRow(int[][] table, int r) {
-		for (int col = 0; col < table.length; col++) {
-			for (int s = col + 1; s < table.length; s++) {
-				if (table[r][col] == table[r][s])
-					return false;
+	public boolean solve(int rowi, int coli) {
+
+		if (rowi ==BOARD_SIZE && ++coli ==BOARD_SIZE) {
+			return true;
+		}
+
+		if (rowi == BOARD_SIZE) {
+			rowi = 0;
+		}
+
+		if (table[rowi][coli] != 0) {
+			return solve(rowi + 1, coli);
+		}
+
+		for (int number = 1; number <= 9; ++number) {
+
+			if (valid(rowi, coli, number)) {
+				table[rowi][coli] = number;
+
+				if (solve(rowi + 1, coli))
+					return true;
 			}
 
 		}
-		return true;
 
+		table[rowi][coli] = 0;
+		return false;
 	}
 
-	private static boolean checkCol(int[][] table, int c) {
-		for (int row = 0; row < table.length; row++) {
-			for (int s = row + 1; s < table.length; s++) {
-
-				if (table[row][c] == table[s][c])
-					return false;
-
-			}
-
-		}
-		return true;
-
-	}
-
-	private static void display(int[][] t) {
-		for (int i = 0; i < t.length; i++) {
-			for (int j = 0; j < t[0].length; j++) {
+	private void display(int[][] t) {
+		for (int i = 0; i < BOARD_SIZE; i++) {
+			for (int j = 0; j <BOARD_SIZE; j++) {
 				System.out.print(t[i][j] + " ");
 			}
 			System.out.println();
@@ -66,3 +97,6 @@ public class Sudoku {
 
 	}
 }
+
+	
+

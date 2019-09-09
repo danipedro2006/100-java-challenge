@@ -1,8 +1,10 @@
+// recursive function to calculate Fibonaci numbers
 package Algorithms;
 
 public class Fibonaci {
 
 	public static void main(String[] args) {
+		
 		int n=2;
 		System.out.println(fib(n));
 	}

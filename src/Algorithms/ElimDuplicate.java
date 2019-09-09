@@ -1,9 +1,11 @@
+
 package Algorithms;
 
 public class ElimDuplicate {
 	static int[] series;
 
 	public static void main(String[] args) {
+
 		int[] series = { 1, 2, 5, 3, 2, 7, 8, 9, 6, 4, 2, 5, 3, 4, 5 };
 		elimdup(series);
 		disp(series);

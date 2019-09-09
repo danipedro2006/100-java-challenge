@@ -1,8 +1,12 @@
+//Java program to determine least common multiple (lcm) of two given numbers
+
 package Algorithms;
 
 public class LCM {
 
 	public static void main(String[] args) {
+
+		// variable a, store the given numbers
 		int a = 15;
 		int b = 25;
 		lcm(a, b);

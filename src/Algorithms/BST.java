@@ -1,3 +1,5 @@
+// simple implementation of binary tree data structure
+
 package Algorithms;
 
 import java.util.Stack;
@@ -60,6 +62,20 @@ public class BST {
 		tree.root.left.left.left = new Node(8);
 
 		System.out.println(tree.size());
+	}
+
+}
+
+class AppTest {
+
+	public static void main(String[] args) {
+		// int[] data = {3, 4, 5, 1, 2, 5, 6, 7, 8, 9};
+
+		BinaryTree bt = new BinaryTree();
+		bt.add(2);
+		bt.add(6);
+
+		bt.traverseInOrder(bt.getRoot());
 	}
 
 }

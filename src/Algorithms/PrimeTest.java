@@ -1,23 +1,24 @@
+//Java program to check if a given number is prime
+
 package Algorithms;
 
 public class PrimeTest {
 
 	public static void main(String[] args) {
-		int n=7;
-		System.out.println(isPrime(n));
+
+		// value to be checked is stored in variable number
+		int number = 7;
+		System.out.println(isPrime(number));
 	}
 
-	private static boolean isPrime(int n) {
-		
-		for(int i=2;i*i<=n;i++)
-			{
-			
-				if(n%i==0)
-					{
-						return false;
-					}
-				
+	private static boolean isPrime(int number) {
+
+		for (int i = 2; i * i <= number; i++) {
+
+			if (number % i == 0) {
+				return false;
 			}
-			return true;
+		}
+		return true;
 	}
 }
